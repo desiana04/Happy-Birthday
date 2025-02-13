@@ -1,0 +1,79 @@
+/* Background */
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar video mengisi seluruh layar */
+    z-index: -1; /* Menjadikan video berada di belakang konten */
+}
+
+/* Container Putih */
+.container {
+    background-color: white;
+    width: 80%;
+    max-width: 600px; /* Batas maksimum */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    border-radius: 10px; /* Sudut melengkung */
+    overflow: hidden; /* Mencegah gambar keluar */
+}
+
+/* Gambar di dalam Container */
+.container img {
+    width: 100%; /* Mengisi lebar container */
+    height: auto; /* Menyesuaikan tinggi agar tidak terdistorsi */
+    border-radius: 10px; /* Jika ingin gambar juga melengkung */
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background-color: #d13550;
+}
+
+.continue-music {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue  ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.continue-music:hover {
+    background-color: rgb(66, 66, 125) ;
+}
+

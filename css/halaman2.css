@@ -1,0 +1,332 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak vertikal */
+    justify-content: center; /* Menyusun konten di tengah secara vertikal */
+    align-items: center; /* Menyusun konten di tengah secara horizontal */
+    min-height: 100vh; /* Memastikan halaman bisa bertambah tinggi */
+    overflow: auto; /* Memungkinkan scroll */
+}
+
+
+
+.header {
+    display: flex;
+    align-items: center; /* Memastikan teks dan gambar sejajar secara vertikal */
+    gap: 20px; /* Memberikan jarak antara teks dan gambar */
+    padding: 20px;
+}
+
+.header h1 {
+    color: #204528;
+    font-size: 2.5em;
+    text-align: left;
+    margin: 0; /* Menghapus margin default */
+}
+
+.image-start img {
+    width: 300px; /* Ukuran gambar */
+    height: 350px;
+    margin-left: 100px; /* Memberikan jarak antara gambar dan teks */
+    margin-top: 10%;
+}
+
+.content {
+    text-align: center; /* Pusatkan teks di dalam konten */
+    margin-top: 70px; /* Beri jarak antara konten dan elemen di atasnya */
+}
+
+.content h2 {
+    font-size: 2.5em;
+    color: #204528;
+    margin: 0; /* Menghapus margin default */
+}
+
+.content p {
+    font-size: 1.5em;
+    color: #FF07A4;
+    margin: 10px 0 0; /* Beri jarak antara "MADE FOR YOU" dan "{ With Love }" */
+}
+
+.stop-music {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer
+}
+
+.stop-music {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #04AA6D;
+}
+  
+.stop-music:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.play-music {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer
+}
+
+.play-music {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+  
+.play-music:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+/* Card Container */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Menambahkan jarak antar card */
+    margin-top: 30px;
+    padding: 10px;
+}
+
+/* Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Memastikan elemen di dalamnya selalu di tengah */
+    text-align: center;
+    width: 220px; /* Sesuaikan lebar */
+    height: 280px; /* Sesuaikan tinggi */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden; /* Mencegah elemen keluar dari card */
+    gap: 10px; /* Menjaga jarak antar elemen */
+}
+
+/* Warna yang berbeda setiap 3 kartu */
+.card:nth-child(3n+1) {
+    background-color: rgba(255, 239, 224, 0.7);
+}
+
+.card:nth-child(3n+2) {
+    background-color: rgba(255, 7, 164, 0.7);
+}
+
+.card:nth-child(3n+3) {
+    background-color: rgba(212, 26, 26, 0.7);
+}
+
+/* Gambar dalam card */
+/* Pastikan gambar di dalam card tidak keluar */
+.card img {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain; /* Menyesuaikan gambar tanpa keluar dari batas */
+}
+
+/* Pastikan teks tidak keluar */
+.card p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #204528;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Mencegah teks turun ke bawah */
+    overflow: hidden; /* Sembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis; /* Tambahkan titik tiga jika terlalu panjang */
+}
+
+.card a {
+    text-decoration: none;
+    display: block; /* Supaya link memenuhi area tombol */
+    width: 100%; /* Link mengikuti ukuran tombol */
+}
+
+/* Perbaiki tombol agar tetap di dalam card */
+.card button {
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%; /* Sesuaikan agar tetap proporsional */
+    text-align: center;
+}
+
+/* Warna button setiap 3 kartu */
+.card:nth-child(3n+1) button {
+    background-color: #EB9ECE;
+    color: black;
+}
+
+.card:nth-child(3n+2) button {
+    background-color: #D39889;
+    color: black;
+}
+
+.card:nth-child(3n+3) button {
+    background-color: #F4D8BD;
+    color: black;
+}
+
+/* Hover button */
+.card button:hover {
+    opacity: 0.8;
+}
+
+/* Penyesuaian gambar "Letter", "Quotes", dan "Photos" ke atas */
+.letter, .quotes, .photos {
+    margin-top: -30px; /* Mengangkat elemen lebih dekat ke atas */
+}
+/* Style untuk popup */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.flip-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Memberi jarak antar kartu */
+    margin-top: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flip-card-front img {
+    width: 100%;  
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    background-color: #FF69B4; /* Warna pink gemas */
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    font-size: 16px;
+}
+.flip-card-back p {
+    font-size: 16px;
+    text-align: center; 
+    padding: 10px;
+    line-height: 1.5;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.pop {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-cont {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
